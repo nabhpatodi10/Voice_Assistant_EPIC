@@ -438,7 +438,7 @@ def Login_Function():
                                     task=" ".join(task[a+1:])
                                     
                                     url="https://google.com/search?q="+task
-                                    webbrowser.get(browser_path).open(url)
+                                    webbrowser.open(url)
 
                                 elif "battery status" in task:
                                     t="the charge left is " + str(battery.percent) +" percent"
@@ -1099,7 +1099,7 @@ def Login_Function():
                                             to_lang_1=lang_dict[l]
 
                                     url="https://translate.google.co.in/?sl="+from_lang_1+"&tl="+to_lang_1+"&text="+task+"&op=translate"
-                                    webbrowser.get(browser_path).open(url)
+                                    webbrowser.open(url)
 
                                 elif "Google Drive" in task or "drive" in task:
                                     t="Opening Google Drive in Chrome"
@@ -1108,7 +1108,7 @@ def Login_Function():
                                     db_connection.commit()
 
                                     url = "https://drive.google.com/drive/my-drive"
-                                    webbrowser.get(browser_path).open(url)
+                                    webbrowser.open(url)
                                                 
                                 elif "Google" in task:
                                     t="Opening Google.com in Chrome"
@@ -1116,7 +1116,7 @@ def Login_Function():
                                     cursor.execute(f"UPDATE chat_history SET Chat_EPIC='{t}' WHERE Date='{DATE}' AND Chat_User='{task}' AND Chat_EPIC IS NULL;")
                                     db_connection.commit()
                                     url = "google.com"
-                                    webbrowser.get(browser_path).open(url)
+                                    webbrowser.open(url)
                                                 
                                 elif "YouTube" in task:
                                     t="Opening Youtube"
@@ -1124,7 +1124,7 @@ def Login_Function():
                                     cursor.execute(f"UPDATE chat_history SET Chat_EPIC='{t}' WHERE Date='{DATE}' AND Chat_User='{task}' AND Chat_EPIC IS NULL;")
                                     db_connection.commit()
                                     url = "https://www.youtube.com/"
-                                    webbrowser.get(browser_path).open(url)
+                                    webbrowser.open(url)
                                                 
                                 elif "mail" in task or "Gmail" in task:
                                     t="Opening Gmail"
@@ -1132,7 +1132,7 @@ def Login_Function():
                                     cursor.execute(f"UPDATE chat_history SET Chat_EPIC='{t}' WHERE Date='{DATE}' AND Chat_User='{task}' AND Chat_EPIC IS NULL;")
                                     db_connection.commit()
                                     url = "https://mail.google.com/mail/?tab=rm&ogbl"
-                                    webbrowser.get(browser_path).open(url)
+                                    webbrowser.open(url)
                                 
                                 elif "website" in task or "Website" in task:
                                     x=0
@@ -1147,7 +1147,7 @@ def Login_Function():
                                         talktome(t)
                                         cursor.execute(f"UPDATE chat_history SET Chat_EPIC='{t}' WHERE Date='{DATE}' AND Chat_User='{task}' AND Chat_EPIC IS NULL;")
                                         db_connection.commit()
-                                        webbrowser.get(browser_path).open(url)
+                                        webbrowser.open(url)
                                     except:
                                         t="Searching Website"
                                         talktome(t)
@@ -1155,7 +1155,7 @@ def Login_Function():
                                         db_connection.commit()
                                         base_url="https://google.com/search?q="
                                         final_url=base_url+url
-                                        webbrowser.get(browser_path).open(final_url)
+                                        webbrowser.open(final_url)
                                     
                                 elif "Jokes" in task or "jokes" in task or "Joke" in task or "joke" in task:
                                     t="Finding Jokes"
@@ -1190,7 +1190,7 @@ def Login_Function():
                                             if task[i]=="play" or task[i]=="Play":
                                                 task=" ".join(task[i+1:])
                                         url=url+task
-                                    webbrowser.get(browser_path).open(url)
+                                    webbrowser.open(url)
                                     
                                 elif "Open" in task or "open" in task:
                                     x=0
@@ -1372,7 +1372,7 @@ def Login_Function():
                                         db_connection.commit()
 
                                         url="https://google.com/search?q="+task
-                                        webbrowser.get(browser_path).open(url)
+                                        webbrowser.open(url)
                                     
                                 elif "what" in task or "What" in task or "Calculate" in task or "calculate" in task or "where" in task or "location" in task or "when" in task or "When" in task or "who" in task or "Who" in task or "how" in task or "How" in task:
                                     app_id = 'RU483J-YU4YE46UQ4'
@@ -1391,7 +1391,7 @@ def Login_Function():
                                         cursor.execute(f"UPDATE chat_history SET Chat_EPIC='{t}' WHERE Date='{DATE}' AND Chat_User='{task}' AND Chat_EPIC IS NULL;")
                                         db_connection.commit()
                                         url="https://google.com/search?q="+task
-                                        webbrowser.get(browser_path).open(url)
+                                        webbrowser.open(url)
                                 
                                 elif "hai" in task or "hello" in task or "Hello" in task or "Hi" in task or "hi" in task or "Hey" in task or "hey" in task:
                                     hour = datetime.datetime.now().hour
@@ -1416,7 +1416,7 @@ def Login_Function():
                                     cursor.execute(f"UPDATE chat_history SET Chat_EPIC='{t}' WHERE Date='{DATE}' AND Chat_User='{task}' AND Chat_EPIC IS NULL;")
                                     db_connection.commit()
                                     url="https://google.com/search?q="+task
-                                    webbrowser.get(browser_path).open(url)
+                                    webbrowser.open(url)
                             
                             else:
                                 with sr.Microphone() as source:
@@ -1467,7 +1467,7 @@ def Login_Function():
                                         task=" ".join(task[a+1:])
                                         
                                         url="https://google.com/search?q="+task
-                                        webbrowser.get(browser_path).open(url)
+                                        webbrowser.open(url)
 
                                     elif "battery status" in task:
                                         t="the charge left is " + str(battery.percent) +" percent"
@@ -2128,7 +2128,7 @@ def Login_Function():
                                                 to_lang_1=lang_dict[l]
 
                                         url="https://translate.google.co.in/?sl="+from_lang_1+"&tl="+to_lang_1+"&text="+task+"&op=translate"
-                                        webbrowser.get(browser_path).open(url)
+                                        webbrowser.open(url)
 
                                     elif "Google Drive" in task or "drive" in task:
                                         t="Opening Google Drive in Chrome"
@@ -2137,7 +2137,7 @@ def Login_Function():
                                         db_connection.commit()
 
                                         url = "https://drive.google.com/drive/my-drive"
-                                        webbrowser.get(browser_path).open(url)
+                                        webbrowser.open(url)
                                                     
                                     elif "Google" in task:
                                         t="Opening Google.com in Chrome"
@@ -2145,7 +2145,7 @@ def Login_Function():
                                         cursor.execute(f"UPDATE chat_history SET Chat_EPIC='{t}' WHERE Date='{DATE}' AND Chat_User='{task}' AND Chat_EPIC IS NULL;")
                                         db_connection.commit()
                                         url = "google.com"
-                                        webbrowser.get(browser_path).open(url)
+                                        webbrowser.open(url)
                                                     
                                     elif "YouTube" in task:
                                         t="Opening Youtube"
@@ -2153,7 +2153,7 @@ def Login_Function():
                                         cursor.execute(f"UPDATE chat_history SET Chat_EPIC='{t}' WHERE Date='{DATE}' AND Chat_User='{task}' AND Chat_EPIC IS NULL;")
                                         db_connection.commit()
                                         url = "https://www.youtube.com/"
-                                        webbrowser.get(browser_path).open(url)
+                                        webbrowser.open(url)
                                                     
                                     elif "mail" in task or "Gmail" in task:
                                         t="Opening Gmail"
@@ -2161,7 +2161,7 @@ def Login_Function():
                                         cursor.execute(f"UPDATE chat_history SET Chat_EPIC='{t}' WHERE Date='{DATE}' AND Chat_User='{task}' AND Chat_EPIC IS NULL;")
                                         db_connection.commit()
                                         url = "https://mail.google.com/mail/?tab=rm&ogbl"
-                                        webbrowser.get(browser_path).open(url)
+                                        webbrowser.open(url)
                                     
                                     elif "website" in task or "Website" in task:
                                         x=0
@@ -2176,7 +2176,7 @@ def Login_Function():
                                             talktome(t)
                                             cursor.execute(f"UPDATE chat_history SET Chat_EPIC='{t}' WHERE Date='{DATE}' AND Chat_User='{task}' AND Chat_EPIC IS NULL;")
                                             db_connection.commit()
-                                            webbrowser.get(browser_path).open(url)
+                                            webbrowser.open(url)
                                         except:
                                             t="Searching Website"
                                             talktome(t)
@@ -2184,7 +2184,7 @@ def Login_Function():
                                             db_connection.commit()
                                             base_url="https://google.com/search?q="
                                             final_url=base_url+url
-                                            webbrowser.get(browser_path).open(final_url)
+                                            webbrowser.open(final_url)
                                         
                                     elif "Jokes" in task or "jokes" in task or "Joke" in task or "joke" in task:
                                         t=pyjokes.get_joke(language="en", category="all")
@@ -2219,7 +2219,7 @@ def Login_Function():
                                                 if task[i]=="play" or task[i]=="Play":
                                                     task=" ".join(task[i+1:])
                                             url=url+task
-                                        webbrowser.get(browser_path).open(url)
+                                        webbrowser.open(url)
                                         
                                     elif "Open" in task or "open" in task:
                                         x=0
@@ -2401,7 +2401,7 @@ def Login_Function():
                                             db_connection.commit()
 
                                             url="https://google.com/search?q="+task
-                                            webbrowser.get(browser_path).open(url)
+                                            webbrowser.open(url)
                                         
                                     elif "what" in task or "What" in task or "Calculate" in task or "calculate" in task or "where" in task or "location" in task or "when" in task or "When" in task or "who" in task or "Who" in task or "how" in task or "How" in task:
                                         app_id = 'RU483J-YU4YE46UQ4'
@@ -2420,7 +2420,7 @@ def Login_Function():
                                             cursor.execute(f"UPDATE chat_history SET Chat_EPIC='{t}' WHERE Date='{DATE}' AND Chat_User='{task}' AND Chat_EPIC IS NULL;")
                                             db_connection.commit()
                                             url="https://google.com/search?q="+task
-                                            webbrowser.get(browser_path).open(url)
+                                            webbrowser.open(url)
                                     
                                     elif "hai" in task or "hello" in task or "Hello" in task or "Hi" in task or "hi" in task or "Hey" in task or "hey" in task:
                                         hour = datetime.datetime.now().hour
@@ -2451,7 +2451,7 @@ def Login_Function():
                                             if "yes" in task_1 or "Yes" in task_1:
                                                 talktome("searching")
                                                 url="https://google.com/search?q="+task
-                                                webbrowser.get(browser_path).open(url)
+                                                webbrowser.open(url)
                                             else:
                                                 talktome("Ok sir")
                                                 listentome()
