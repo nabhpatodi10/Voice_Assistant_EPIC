@@ -1118,7 +1118,7 @@ def Login_Function():
                                     url = "google.com"
                                     webbrowser.open(url)
                                                 
-                                elif "YouTube" in task:
+                                elif "YouTube" in task or "Youtube" in task or "youtube" in task:
                                     t="Opening Youtube"
                                     talktome(t)
                                     cursor.execute(f"UPDATE chat_history SET Chat_EPIC='{t}' WHERE Date='{DATE}' AND Chat_User='{task}' AND Chat_EPIC IS NULL;")
@@ -2147,7 +2147,7 @@ def Login_Function():
                                         url = "google.com"
                                         webbrowser.open(url)
                                                     
-                                    elif "YouTube" in task:
+                                    elif "YouTube" in task or "youtube" in task or "Youtube" in task:
                                         t="Opening Youtube"
                                         talktome(t)
                                         cursor.execute(f"UPDATE chat_history SET Chat_EPIC='{t}' WHERE Date='{DATE}' AND Chat_User='{task}' AND Chat_EPIC IS NULL;")
